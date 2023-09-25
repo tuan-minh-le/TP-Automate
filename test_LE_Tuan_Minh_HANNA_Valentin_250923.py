@@ -1,5 +1,6 @@
 from Automate_LE_Tuan_Minh_HANNA_Valentin_250923 import Automate
 from Automate_LE_Tuan_Minh_HANNA_Valentin_250923 import verification
+from Automate_LE_Tuan_Minh_HANNA_Valentin_250923 import inputsent
 
 etat = {0 : [1,8,8,8,4,8],                  #Tableau de transition de l'automate ; Les etats sont representes de 0 a 9  
         1 : [8,1,2,8,8,8],                  #0 : Attente d'article
@@ -17,8 +18,10 @@ sentence1 = "le joli chat mange."
 sentence2 = "la grosse souris verte mange le joli petite chat blanc." 
 sentence3 = "le joli chat joue"
 sentence4 = "le joli chat joue." 
+sentence5 = inputsent()
 
 test1 = print(verification(sentence1, dictionnary,etat))         #True
 test2 = print(verification(sentence2, dictionnary,etat))         #True
 test3 = print(verification(sentence3, dictionnary,etat))         #False
 test4 = print(verification(sentence4, dictionnary,etat))         #False
+test5 = print(verification(sentence5, dictionnary, etat))

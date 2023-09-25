@@ -16,6 +16,10 @@ class Automate :
     def refused(self):
         return self.initial_state == self.refused_state
 
+def inputsent() :                                           #Insertion d'une phrase
+    sentence = input("Inserez votre phrase : ")
+    return sentence 
+    
 def verification(sentence, dictionnary,etat) :               #Prend en parametres la phrase et le dictionnaire donne ; Retourne True si c'est une phrase correcte
     automate = Automate()
     if sentence[-1] == '.' :                            #On separe le point a la fin du phrase avec "espace-point" permettant a Python de separer la phrase en mots / ponctuations sous forme de liste
